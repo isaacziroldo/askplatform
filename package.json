@@ -1,0 +1,16 @@
+{
+  "name": "AlphaPerguntas",
+  "version": "1.0.0",
+  "description": "uma plataforma de perguntas",
+  "main": "index.js",
+  "author": "Isaac Rocha",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
