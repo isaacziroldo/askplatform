@@ -6,6 +6,8 @@ const connection = require('./database/database')
 
 const Pergunta = require('./database/askDb')
 
+const Resposta = require('./database/AnswerDb')
+
 //Database
 connection
     .authenticate()
