@@ -12,11 +12,12 @@
             <%= pergunta.description %> 
         </p>
         <hr>
-        <form action="">
+        <form method="POST" action="/responder">
             <h3>Responda</h3>
             <label for="">Resposta:</label>
             <textarea name="body" placeholder="Digite a sua resposta!" class="form-control"></textarea>
             <br>
+            <input type="hidden" name="answer" value=" <%= pergunta.id %> ">
             <button type="submit" class="btn btn-primary">Responder</button>
         </form>
 
