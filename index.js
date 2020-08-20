@@ -59,11 +59,21 @@ app.get('/pergunta/:id',(req,res)=>{
     let id = req.params.id
     Pergunta.findOne({
         where: {id: id}
+        
     }).then(pergunta =>{
         if(pergunta !=undefined){
-            res.render('answer',{
-                pergunta: pergunta
+
+            Resposta.findAll({
+                where:{askId:pergunta.id},
+                order: [['id', 'DESC']]
+            }).then(respostas => {
+                res.render('answer',{
+                    pergunta: pergunta,
+                    respostas: respostas
+                })
             })
+
+            
         }else{
             res.render('/')
         }
